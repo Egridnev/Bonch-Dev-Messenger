@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-</LinearLayout>
+    <ImageView
+    android:id="@+id/avatar_image_view"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:layout_marginTop="60dp"
+    app:layout_constraintEnd_toEndOf="@id/linearLayout4"
+    app:layout_constraintStart_toStartOf="@id/linearLayout4"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view">
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/russo_one"
+            android:text="Eugene"
+            android:layout_marginBottom="12dp"
+            android:textAlignment="textEnd"
+            app:layout_constraintBottom_toTopOf="@+id/email_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/email_text_view"
+            app:layout_constraintStart_toStartOf="@+id/email_text_view" />
+
+        <TextView
+            android:id="@+id/email_text_view"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/russo_one"
+            android:gravity="center"
+            android:text="eugenethaamazing@gmail.com"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="264dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/email_confirm_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/russo_one"
+            android:text="Подтвердить почту"
+            app:layout_constraintBottom_toTopOf="@+id/change_password"
+            app:layout_constraintEnd_toEndOf="@+id/change_password"
+            app:layout_constraintStart_toStartOf="@+id/change_password" />
+
+        <Button
+            android:id="@+id/change_password"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/russo_one"
+            android:onClick="showChangePaswordDilog"
+            android:text="Поменять пароль"
+            app:layout_constraintBottom_toTopOf="@+id/sign_out_button"
+            app:layout_constraintEnd_toEndOf="@+id/sign_out_button"
+            app:layout_constraintStart_toStartOf="@+id/sign_out_button" />
+
+        <Button
+            android:id="@+id/sign_out_button"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/russo_one"
+            android:text="Выйти"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
