@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
     >
 
     <ImageView
     android:id="@+id/avatar_image_view"
     android:layout_width="300dp"
-    android:layout_height="150dp"
+    android:layout_height="200dp"
     android:layout_marginTop="60dp"
+    android:src="@drawable/avatar"
     app:layout_constraintEnd_toEndOf="@id/linearLayout4"
     app:layout_constraintStart_toStartOf="@id/linearLayout4"
     app:layout_constraintTop_toTopOf="parent" />
@@ -23,17 +25,23 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view">
+
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view"
+        app:layout_constraintVertical_bias="0.801">
 
         <EditText
             android:id="@+id/name_edit_text"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:fontFamily="@font/russo_one"
             android:text="Eugene"
-            android:layout_marginBottom="12dp"
             android:textAlignment="textEnd"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
             app:layout_constraintBottom_toTopOf="@+id/email_text_view"
             app:layout_constraintEnd_toEndOf="@+id/email_text_view"
             app:layout_constraintStart_toStartOf="@+id/email_text_view" />
@@ -44,7 +52,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/russo_one"
             android:gravity="center"
-            android:text="eugenethaamazing@gmail.com"
+            android:text="eugenetheamazing@gmail.com"
+            android:textColor="@color/colorAccent"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +64,7 @@
         android:id="@+id/linearLayout3"
         android:layout_width="264dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="44dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,8 +77,10 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:background="@drawable/button_style"
             android:fontFamily="@font/russo_one"
             android:text="Подтвердить почту"
+            android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toTopOf="@+id/change_password"
             app:layout_constraintEnd_toEndOf="@+id/change_password"
             app:layout_constraintStart_toStartOf="@+id/change_password" />
@@ -79,9 +90,11 @@
             android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
+            android:background="@drawable/button_style"
             android:fontFamily="@font/russo_one"
             android:onClick="showChangePaswordDilog"
             android:text="Поменять пароль"
+            android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toTopOf="@+id/sign_out_button"
             app:layout_constraintEnd_toEndOf="@+id/sign_out_button"
             app:layout_constraintStart_toStartOf="@+id/sign_out_button" />
@@ -90,8 +103,10 @@
             android:id="@+id/sign_out_button"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_style"
             android:fontFamily="@font/russo_one"
             android:text="Выйти"
+            android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

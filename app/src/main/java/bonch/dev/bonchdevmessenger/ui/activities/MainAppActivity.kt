@@ -3,6 +3,7 @@ package bonch.dev.bonchdevmessenger.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.fragment.app.Fragment
 import bonch.dev.bonchdevmessenger.R
 import bonch.dev.bonchdevmessenger.ui.fragments.ChatFragment
 import bonch.dev.bonchdevmessenger.ui.fragments.PasswordFragment

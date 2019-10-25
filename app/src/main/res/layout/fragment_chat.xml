@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_gradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
@@ -18,18 +19,24 @@
             android:layout_height="wrap_content"
             android:hint="Введите сообщение"
             android:gravity="right"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
             android:fontFamily="@font/russo_one"
             android:layout_alignParentLeft="true"
+            android:maxLines="4"
             android:layout_toLeftOf="@+id/send_message"
             />
 
-        <Button
-
+        <ImageButton
             android:id="@+id/send_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
             android:layout_alignParentRight="true"
-            android:onClick="replaceChatForProfile"/>
+            android:backgroundTint="#742906"
+            android:background="@drawable/send_button"
+            android:onClick="replaceChatForProfile" />
 
     </RelativeLayout>
 
