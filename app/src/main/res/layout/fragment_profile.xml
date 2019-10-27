@@ -8,14 +8,14 @@
     >
 
     <ImageView
-    android:id="@+id/avatar_image_view"
-    android:layout_width="300dp"
-    android:layout_height="200dp"
-    android:layout_marginTop="60dp"
-    android:src="@drawable/avatar"
-    app:layout_constraintEnd_toEndOf="@id/linearLayout4"
-    app:layout_constraintStart_toStartOf="@id/linearLayout4"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/avatar_image_view"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout4"
+        app:layout_constraintStart_toStartOf="@id/linearLayout4"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout4"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout4"
@@ -25,11 +25,9 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/linearLayout3"
-
         app:layout_constraintTop_toBottomOf="@+id/avatar_image_view"
-        app:layout_constraintVertical_bias="0.801">
+        >
 
         <EditText
             android:id="@+id/name_edit_text"
@@ -64,13 +62,13 @@
         android:id="@+id/linearLayout3"
         android:layout_width="264dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout4"
+        >
 
         <Button
             android:id="@+id/email_confirm_button"

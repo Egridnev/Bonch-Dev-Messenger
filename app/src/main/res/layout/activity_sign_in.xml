@@ -8,15 +8,15 @@
     tools:context=".ui.activities.SignInActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/email_sign_in_edit_text"
-        app:layout_constraintEnd_toEndOf="@+id/email_sign_in_edit_text"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/email_sign_in_edit_text"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5">
 
         <ImageView
             android:id="@+id/imageView"
@@ -37,68 +37,79 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/email_sign_in_edit_text"
-        android:layout_width="240dp"
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:fontFamily="@font/russo_one"
-        android:gravity="right"
-        android:inputType="textEmailAddress"
-        android:hint="Почта"
-        android:maxLines="2"
-        android:textColorHint="@color/colorAccent"
-        android:textColor="@color/colorAccent"
-        android:backgroundTint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/password_sign_in_edit_text"
-        app:layout_constraintEnd_toEndOf="@+id/password_sign_in_edit_text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/password_sign_in_edit_text" />
-
-    <EditText
-        android:id="@+id/password_sign_in_edit_text"
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="@font/russo_one"
-        android:gravity="right"
-        android:hint="Пароль"
-        android:inputType="textPassword"
-        android:maxLines="2"
-        android:textColorHint="@color/colorAccent"
-        android:textColor="@color/colorAccent"
-        android:backgroundTint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
-        app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
-        app:layout_constraintStart_toStartOf="@+id/sign_in_button" />
-
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:fontFamily="@font/russo_one"
-        android:textColor="@color/colorAccent"
-        android:text="Войти"
-        android:onClick="enter"
-        android:background="@drawable/button_style"
-        app:layout_constraintBottom_toTopOf="@+id/sing_up_button"
-        app:layout_constraintEnd_toEndOf="@+id/sing_up_button"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/sing_up_button" />
-
-    <Button
-        android:id="@+id/sing_up_button"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/russo_one"
-        android:textColor="@color/colorAccent"
-        android:text="Зарегистрироваться"
-        android:onClick="register"
-        android:background="@drawable/button_style"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
+        <EditText
+            android:id="@+id/email_sign_in_edit_text"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/russo_one"
+            android:gravity="right"
+            android:hint="Почта"
+            android:inputType="textEmailAddress"
+            android:maxLines="2"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/password_sign_in_edit_text"
+            app:layout_constraintEnd_toEndOf="@+id/password_sign_in_edit_text"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/password_sign_in_edit_text" />
+
+        <EditText
+            android:id="@+id/password_sign_in_edit_text"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/russo_one"
+            android:gravity="right"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:maxLines="2"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/sign_in_button"
+            app:layout_constraintEnd_toEndOf="@+id/sign_in_button"
+            app:layout_constraintStart_toStartOf="@+id/sign_in_button" />
+
+        <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/russo_one"
+            android:onClick="enter"
+            android:text="Войти"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@+id/sing_up_button"
+            app:layout_constraintEnd_toEndOf="@+id/sing_up_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/sing_up_button" />
+
+        <Button
+            android:id="@+id/sing_up_button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/russo_one"
+            android:onClick="register"
+            android:text="Зарегистрироваться"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
